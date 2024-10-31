@@ -1,0 +1,96 @@
+<form (ngSubmit)="onSubmit()" #forma="ngForm" class="p-4 bg-light border rounded" style="max-width: 800px; margin: auto;">
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" id="nombre" class="form-control" [ngModel]="registro.nombre" name="nombre" required>
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <label for="apellido" class="form-label">Apellido</label>
+      <input type="text" id="apellido" class="form-control" [(ngModel)]="registro.apellido" name="apellido" required>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="telefono" class="form-label">Teléfono</label>
+      <input type="tel" id="telefono" class="form-control" [(ngModel)]="registro.telefono" name="telefono" required>
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <label for="parentesco" class="form-label">Registro Parentesco</label>
+      <select id="parentesco" class="form-select" [(ngModel)]="registro.parentesco" name="parentesco" required>
+        <option value="Soltero">Soltero</option>
+        <option value="Casado">Casado</option>
+        <option value="Divorciado">Divorciado</option>
+        <option value="Viudo">Viudo</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="correo" class="form-label">Correo Electrónico</label>
+    <input type="email" id="correo" class="form-control" [(ngModel)]="registro.correo" name="correo" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="direccion" class="form-label">Dirección</label>
+    <input type="text" id="direccion" class="form-control" [(ngModel)]="registro.direccion" name="direccion" required>
+  </div>
+
+  <div class="mb-3">
+    <label for="carnetPasaporte" class="form-label">Carnet o Pasaporte</label>
+    <input type="text" id="carnetPasaporte" class="form-control" [(ngModel)]="registro.carnetPasaporte" name="carnetPasaporte" required>
+  </div>
+
+  <h3 class="mt-4">Datos Extranjeros</h3>
+  
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="nombreExtranjero" class="form-label">Nombre Extranjero</label>
+      <input type="text" id="nombreExtranjero" class="form-control" [(ngModel)]="registro.nombreExtranjero" name="nombreExtranjero">
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <label for="apellidoExtranjero" class="form-label">Apellido Extranjero</label>
+      <input type="text" id="apellidoExtranjero" class="form-control" [(ngModel)]="registro.apellidoExtranjero" name="apellidoExtranjero">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="telefonoExtranjero" class="form-label">Teléfono Extranjero</label>
+      <input type="tel" id="telefonoExtranjero" class="form-control" [(ngModel)]="registro.telefonoExtranjero" name="telefonoExtranjero">
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <label for="direccionExtranjera" class="form-label">Dirección Extranjero</label>
+      <input type="text" id="direccionExtranjera" class="form-control" [(ngModel)]="registro.direccionExtranjero" name="direccionExtranjera">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label for="parentesco" class="form-label">Relación de Parentesco</label>
+      <select id="parentesco" class="form-select" [(ngModel)]="registro.parentescoExtranjero" name="parentesco">
+        <option value="Hijo">Hijo</option>
+        <option value="Esposo">Esposo</option>
+        <option value="Conyugue">Conyugue</option>
+        <option value="Padre">Padre</option>
+        <option value="Trabajador">Trabajador</option>
+      </select>
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <label for="dniNie" class="form-label">DNI o NIE</label>
+      <input type="text" id="dniNie" class="form-control" [(ngModel)]="registro.dniNie" name="dniNie" required>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="correoExtranjero" class="form-label">Correo Extranjero</label>
+    <input type="email" id="correoExtranjero" class="form-control" [(ngModel)]="registro.correoExtranjero" name="correoExtranjero">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>

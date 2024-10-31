@@ -1,0 +1,50 @@
+.hero {
+    background-image: url('https://source.unsplash.com/1600x900/?pastel,soft,documents');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #ffd0f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero .container {
+    background: rgba(255, 181, 222, 0.7); /* Fondo semitransparente blanco */
+    padding: 30px;
+    border-radius: 10px;
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #816eff; /* Color lila pastel */
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    color: #483d8b; /* Color azul pastel oscuro */
+  }
+  
+  .btn-primary {
+    background-color: #ffb6c1; /* Rosa pastel */
+    border: none;
+    color: #ffffff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #ff9aa2; /* Un tono más fuerte de rosa pastel */
+  }
+  
+  .btn-secondary {
+    background-color: #add8e6; /* Azul pastel */
+    border: none;
+    color: #ffffff;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #87ceeb; /* Azul más intenso */
+  }
+  
+  

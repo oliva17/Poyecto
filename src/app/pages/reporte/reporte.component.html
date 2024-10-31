@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reporte del Registro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h2, h3 {
+      color: #2c3e50;
+      border-bottom: 2px solid #2c3e50;
+      padding-bottom: 5px;
+    }
+    p {
+      margin: 8px 0;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .container {
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .label {
+      font-weight: bold;
+      color: #34495e;
+    }
+    .value {
+      color: #2c3e50;
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+    }
+    .column {
+      width: 48%;
+    }
+    .buttons {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 20px;
+    }
+    .btn {
+      padding: 10px 15px;
+      margin-left: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .btn-edit {
+      background-color: #3498db;
+      color: white;
+    }
+    .btn-print {
+      background-color: #2ecc71;
+      color: white;
+    }
+    /* Estilo para impresión */
+    @media print {
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        border: none;
+        box-shadow: none;
+      }
+      .buttons {
+        display: none; /* Ocultar los botones al imprimir */
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="buttons">
+    <button class="btn btn-edit" onclick="editForm()">Editar</button>
+    <button class="btn btn-print" onclick="window.print()">Imprimir</button>
+  </div>
+
+  <h2>Reporte del Registro</h2>
+
+  <!-- Datos personales -->
+  <div class="section">
+    <h3>Datos Personales</h3>
+    <div class="row">
+      <div class="column">
+        <p><span class="label">Nombre:</span> <span class="value">{{ registro.nombre }}</span></p>
+        <p><span class="label">Apellido:</span> <span class="value">{{ registro.apellido }}</span></p>
+      </div>
+      <div class="column">
+        <p><span class="label">Teléfono:</span> <span class="value">{{ registro.telefono }}</span></p>
+        <p><span class="label">Correo electrónico:</span> <span class="value">{{ registro.correo }}</span></p>
+      </div>
+    </div>
+    <p><span class="label">Parentesco:</span> <span class="value">{{ registro.parentesco }}</span></p>
+    <p><span class="label">Dirección:</span> <span class="value">{{ registro.direccion }}</span></p>
+  </div>
+
+  <!-- Datos del extranjero -->
+  <div class="section">
+    <h3>Datos del Extranjero</h3>
+    <div class="row">
+      <div class="column">
+        <p><span class="label">Nombre Extranjero:</span> <span class="value">{{ registro.nombreExtranjero }}</span></p>
+        <p><span class="label">Teléfono Extranjero:</span> <span class="value">{{ registro.telefonoExtranjero }}</span></p>
+        <p><span class="label">Dirección Extranjero:</span> <span class="value">{{ registro.direccionExtranjero }}</span></p>
+      </div>
+      <div class="column">
+        <p><span class="label">Correo Extranjero:</span> <span class="value">{{ registro.correoExtranjero }}</span></p>
+        <p><span class="label">DNI o NIE:</span> <span class="value">{{ registro.dniNie }}</span></p>
+        <p><span class="label">Parentesco:</span> <span class="value">{{ registro.parentescoExtranjero }}</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function editForm() {
+    // Aquí puedes redirigir al formulario de edición o activar el modo de edición
+    window.location.href = './formulario.component.html'; // Cambia '/ruta-del-formulario' por la ruta real
+  }
+</script>
+
+</body>
+</html>
+
